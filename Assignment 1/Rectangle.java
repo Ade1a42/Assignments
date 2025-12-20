@@ -1,0 +1,51 @@
+public class Rectangle {
+    private double width;
+    private double height;
+    private int id;
+    private static int idGen;
+
+//   default constructor
+    public Rectangle() {
+        width = 1.0;
+        height = 1.0;
+        id = idGen++;
+    }
+
+//   constructor with parameters
+    public Rectangle( double width, double height ) {
+        this();
+        setWidth(width);
+        setHeight(height);
+    }
+
+    public void setWidth(double width) {
+        if( width > 0 ){
+            this.width = width;
+        } else {
+            System.out.println("IllegalArgumentException");
+        }
+    }
+
+    public void setHeight(double height){
+        if( height > 0 ){
+            this.height = height;
+        } else {
+            System.out.println("IllegalArgumentException");
+        }
+    }
+
+    public double area(){
+        return width * height;
+    }
+
+    public double perimeter(){
+        return ( width + height ) * 2;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle [id=" + id +
+                ", width=" + width +
+                ", height=" + height + "]";
+    }
+}
