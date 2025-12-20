@@ -2,7 +2,7 @@ public class Rectangle {
     private double width;
     private double height;
     private int id;
-    private static int idGen;
+    private static int idGen = 1;
 
 //   default constructor
     public Rectangle() {
@@ -18,6 +18,14 @@ public class Rectangle {
         setHeight(height);
     }
 
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
     public void setWidth(double width) {
         if( width > 0 ){
             this.width = width;
@@ -30,7 +38,7 @@ public class Rectangle {
         if( height > 0 ){
             this.height = height;
         } else {
-            System.out.println("IllegalArgumentException");
+            throw new IllegalArgumentException("Width must be greater than 0");
         }
     }
 
