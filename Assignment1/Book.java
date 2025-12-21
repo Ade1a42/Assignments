@@ -1,4 +1,5 @@
 import java.time.Year;
+import java.util.Scanner;
 
 public class Book {
     private int id;
@@ -22,7 +23,8 @@ public class Book {
         setYear(year);
     }
 
-//    getters
+
+    //    getters
     public int getID(){
         return id;
     }
@@ -43,7 +45,7 @@ public class Book {
         return available;
     }
 
-//    setters
+    //    setters
     public void setTitle(String title){
         if( title != null ){
             this.title = title;
@@ -67,7 +69,7 @@ public class Book {
         }
     }
 
-//    other methods
+    //    other methods
     public void markAsBorrowed(){
         available = false;
     }
@@ -85,4 +87,3 @@ public class Book {
                 " available status=" + available;
     }
 }
-
