@@ -30,7 +30,7 @@ public class Rectangle {
         if( width > 0 ){
             this.width = width;
         } else {
-            System.out.println("IllegalArgumentException");
+            throw new IllegalArgumentException("Width must be greater than 0");
         }
     }
 
