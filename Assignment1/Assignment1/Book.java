@@ -1,5 +1,6 @@
+package Assignment1;
+
 import java.time.Year;
-import java.util.Scanner;
 
 public class Book {
     private int id;
@@ -80,7 +81,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book's id=" + id +
+        return "Assignment1.Book's id=" + id +
                 " title=" + title +
                 " author=" + author +
                 " year=" + year +

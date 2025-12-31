@@ -1,3 +1,5 @@
+package Assignment1;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -85,7 +87,7 @@ public class LibraryApp {
         try {
             Book newBook = new Book(title, author, year);
             books.add(newBook);
-            System.out.println("Book added successfully! ID: " + newBook.getID()); // Fixed: getID()
+            System.out.println("Assignment1.Book added successfully! ID: " + newBook.getID()); // Fixed: getID()
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -117,14 +119,14 @@ public class LibraryApp {
             if (book.getID() == id) {
                 if (book.getAvailable()) {
                     book.markAsBorrowed();
-                    System.out.println("Book borrowed successfully!");
+                    System.out.println("Assignment1.Book borrowed successfully!");
                 } else {
-                    System.out.println("Book is already borrowed!");
+                    System.out.println("Assignment1.Book is already borrowed!");
                 }
                 return;
             }
         }
-        System.out.println("Book with ID " + id + " not found!");
+        System.out.println("Assignment1.Book with ID " + id + " not found!");
     }
 
     private void returnBook() {
@@ -136,14 +138,14 @@ public class LibraryApp {
             if (book.getID() == id) {
                 if (!book.getAvailable()) {
                     book.markAsReturned();
-                    System.out.println("Book returned successfully!");
+                    System.out.println("Assignment1.Book returned successfully!");
                 } else {
-                    System.out.println("Book was not borrowed!");
+                    System.out.println("Assignment1.Book was not borrowed!");
                 }
                 return;
             }
         }
-        System.out.println("Book with ID " + id + " not found!");
+        System.out.println("Assignment1.Book with ID " + id + " not found!");
     }
 
     private void deleteBook() {
@@ -155,10 +157,10 @@ public class LibraryApp {
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getID() == id) {
                 books.remove(i);
-                System.out.println("Book deleted successfully!");
+                System.out.println("Assignment1.Book deleted successfully!");
                 return;
             }
         }
-        System.out.println("Book with ID " + id + " not found!");
+        System.out.println("Assignment1.Book with ID " + id + " not found!");
     }
 }

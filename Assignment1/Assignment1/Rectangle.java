@@ -1,3 +1,5 @@
+package Assignment1;
+
 public class Rectangle {
     private double width;
     private double height;
@@ -13,7 +15,7 @@ public class Rectangle {
 
 //   constructor with parameters
     public Rectangle( double width, double height ) {
-        this();
+        this(); // calling another constructor
         setWidth(width);
         setHeight(height);
     }
@@ -52,7 +54,7 @@ public class Rectangle {
 
     @Override
     public String toString() {
-        return "Rectangle [id=" + id +
+        return "Assignment1.Rectangle [id=" + id +
                 ", width=" + width +
                 ", height=" + height + "]";
     }
