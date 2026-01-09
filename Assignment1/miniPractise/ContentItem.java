@@ -50,7 +50,7 @@ public abstract class ContentItem {
     // !!!
     public abstract double getLicenseCost(int currentYear);
 
-    public int getMinute(){ return durationMinutes; }
+    public int getDurationMinutes(){ return durationMinutes; }
 
     public String getTitle(){ return title; }
 
